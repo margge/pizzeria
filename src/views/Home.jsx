@@ -19,7 +19,7 @@ const Home = () => {
     <p className="card-text">{pizza.ingredients}</p>
     <p className="card-text">{pizza.price}</p>
     <div className='d-flex'>
-        <button className='btn btn-danger'>
+        <button className='btn btn-danger' onClick={() => navigate("/detalle")}>
             Ver más
         </button>
         <button className='btn btn-success' onClick={() => addToCart(pizza)}>
@@ -31,8 +31,6 @@ const Home = () => {
         </div>
       ))}
       </div>
-      <button onClick={() => navigate("/carrito")}> Cart</button>
-
     </div>
   )
 }

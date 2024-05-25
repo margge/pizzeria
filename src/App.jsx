@@ -1,5 +1,8 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import NavBar from './components/NavBar';
+import "bootstrap/dist/css/bootstrap.css";
+
 
 import Home from './views/Home';
 import Detail from './views/Detail';
@@ -10,6 +13,7 @@ const App = () => {
 
   return (
     <>
+      <NavBar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/detalle' element={<Detail/>}/>
