@@ -2,16 +2,18 @@ import {useContext, useState} from 'react';
 import { PizzeriaContext } from '../context/PizzeriaContext';
 import "bootstrap/dist/css/bootstrap.css"
 import { useNavigate } from 'react-router-dom';
+//import NotFound from './NotFound';
 const Home = () => {
 
     const {getPizzas, addToCart} = useContext(PizzeriaContext);
+   
     const navigate = useNavigate();
 
   return (
     <div className='container'>
         <div className='row'>
       {getPizzas && getPizzas.map((pizza) => (
-        <div key={pizza.id} className='col-md-3'>
+        <div key={pizza.id} value={pizza.id} className='col-md-4'>
   <div className="card">
   <img className="card-img-top" src={pizza.img} alt="Card image cap"/>
   <div className="card-body">
@@ -19,7 +21,7 @@ const Home = () => {
     <p className="card-text">{pizza.ingredients}</p>
     <p className="card-text">{pizza.price}</p>
     <div className='d-flex'>
-        <button className='btn btn-danger' onClick={() => navigate("/detalle")}>
+        <button className='btn btn-danger' onClick={()=>navigate(`/detalle/${pizza.id}`) }>
             Ver más
         </button>
         <button className='btn btn-success' onClick={() => addToCart(pizza)}>

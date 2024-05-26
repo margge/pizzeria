@@ -1,8 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
-import './App.css'
 import NavBar from './components/NavBar';
 import "bootstrap/dist/css/bootstrap.css";
-
 
 import Home from './views/Home';
 import Detail from './views/Detail';
@@ -16,7 +14,7 @@ const App = () => {
       <NavBar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/detalle' element={<Detail/>}/>
+        <Route path='/detalle/:id' element={<Detail/>}/>
         <Route path='/carrito' element={<Cart/>}/>
         <Route path='*' element={<NotFound/>}/>        
       </Routes>
