@@ -21,7 +21,7 @@ const Home = () => {
     <p className="card-text">{pizza.ingredients}</p>
     <p className="card-text">{pizza.price}</p>
     <div className='d-flex'>
-        <button className='btn btn-danger' onClick={()=>navigate(`/detalle/${pizza.id}`) }>
+        <button className='btn btn-danger' onClick={()=>navigate(`/detalle/${pizza.name}`) }>
             Ver más
         </button>
         <button className='btn btn-success' onClick={() => addToCart(pizza)}>

@@ -5,8 +5,8 @@ import { useParams, useNavigate } from "react-router-dom";
 const Detail = () => {
   const {getPizzas} = useContext (PizzeriaContext);
   const navigate = useNavigate();
-  const { id } = useParams();
-  let findPizza = getPizzas.find((pizza) => pizza.id == id);
+  const { name } = useParams();
+  let findPizza = getPizzas.find((pizza) => pizza.name == name);
   return (
     <div>
     <div className="card mb-3">
