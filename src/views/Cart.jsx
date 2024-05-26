@@ -1,9 +1,15 @@
 import {useContext} from 'react';
 import { PizzeriaContext } from '../context/PizzeriaContext';
 
-
 const Cart = () => {
-    const {cart} = useContext(PizzeriaContext);
+    const {cart, total} = useContext(PizzeriaContext);
+    console.log(total, "total")
+
+    const totalAmount = cart.reduce(
+      (accumulator, initialValue) => accumulator + (initialValue.count * initialValue.price), 0
+    )
+    console.log(totalAmount, "totalAmount")
+
   return (
     <div>
       <div>
@@ -24,6 +30,7 @@ const Cart = () => {
             </div>
         ))
       }
+      <span>{totalAmount}</span>
     </div>
   )
 }
