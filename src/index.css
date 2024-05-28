@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  min-width: 100%;
 }
 
 body {
@@ -58,11 +59,11 @@ body {
 .banner {
   margin: 80px 0 0 0;
   padding: 0;
-  background-image: url("src/assets/images/piza.jpg");
+  background-image: url("src/assets/images/피자.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 200px;
+  height: 300px;
 }
 
 #total {

@@ -12,6 +12,7 @@ const Home = () => {
     <>
 
 <div className="banner">
+    
    </div>
 
     <div className='container'>   
