@@ -3,27 +3,45 @@ import { PizzeriaContext } from "../context/PizzeriaContext";
 import { useParams, useNavigate } from "react-router-dom";
 
 const Detail = () => {
-  const {getPizzas} = useContext (PizzeriaContext);
+  const {getPizzas, addToCart} = useContext (PizzeriaContext);
   const navigate = useNavigate();
   const { name } = useParams();
   let findPizza = getPizzas.find((pizza) => pizza.name == name);
   return (
     <div>
-    <div className="card mb-3">
-  <div className="row g-0">
-    <div className="col-md-4">
-      <img src={findPizza.img} className="img-fluid rounded-start" alt="Pizza"/>
+    <div className="card descrip espacio">
+  <div className='d-flex'>
+    <div>
+      <img src={findPizza.img} className='rounded pizzaDesc' alt="Pizza"/>
     </div>
-    <div className="col-md-8">
-      <div className="card-body">
-        <h5 className="card-title">{findPizza.name}</h5>
-        <p className="card-text">{findPizza.desc}</p>
-        <p className="card-text"><small className="text-muted">{findPizza.price}</small></p>
+    <div>
+      <div>
+        <h3 className="nameDesc">{findPizza.name}</h3>
+        <p className="desc">{findPizza.desc}</p>
+        <div className='ingre'>
+      <h4>Ingredientes</h4>
+    <ul>
+      <li className='text-capitalize'>
+          🍕 {findPizza.ingredients[0]}
+      </li>
+      <li className='text-capitalize'>
+          🍕 {findPizza.ingredients[1]}
+      </li>
+      <li className='text-capitalize'>
+          🍕 {findPizza.ingredients[2]}
+      </li>
+      <li className='text-capitalize'>
+          🍕 {findPizza.ingredients[3]}
+      </li>
+    </ul>
+    </div>
+        <p><b>Precio: {findPizza.price.toLocaleString('en-US', {style: 'currency', currency: 'USD', maximumFractionDigits:0})} CLP </b></p>
       </div>
     </div>
   </div>
+    <button className="agregar" onClick={() => addToCart(findPizza)}>Agregar</button>
 </div>  
-     <button onClick={() => navigate (`/`)}>volver</button> 
+     <button className="volver" onClick={() => navigate (`/`)}>volver</button> 
     </div>
   )
 }

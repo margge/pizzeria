@@ -13,32 +13,156 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 
 body {
+  padding: 0;
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
+  min-width: 100%;
   min-height: 100vh;
 }
 
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.espacio {
+  margin-top: 90px;
 }
 
+.barra {
+  min-width: 100%;
+  background-color: antiquewhite;
+  margin: 0px;
+  height: 80px;
+}
+
+.mainIcon {
+  align-self: center;
+}
+
+.titulo {
+  padding-left: 20px;
+  align-self: center;
+}
+
+.navInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px; 
+}
+
+.banner {
+  margin: 80px 0 0 0;
+  padding: 0;
+  background-image: url("src/assets/images/piza.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+#total {
+  text-decoration: none;
+  color: #242424;
+}
+
+.container {
+  min-width: 99vw;
+}
+
+.row {
+  margin: 180px 200px ;
+  row-gap: 40px;
+  margin-bottom: 80px;
+}
+
+.cardHome {
+  width: 390px;
+  min-width: 260px;
+}
+
+.ingre {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+ul {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+li {
+  list-style-type: none;
+  align-self: self-start;
+  margin-bottom: 4px;
+}
+
+.descrip {
+width: 85%;
+margin: auto;
+margin-top: 80px;
+}
+
+.pizzaDesc {
+  margin:  30px ;
+  width: 30rem;
+  border-radius: 5px;
+}
+
+.nameDesc {
+  padding-top: 3% 
+}
+
+.desc {
+  padding: 10px 30px 10px 0 ;
+  text-align: justify;
+}
+
+.agregar {
+  background-color: #73806f;
+  border: none;
+}
+
+.volver {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-top: 30px;
+  background-color: rgba(206, 9, 9, 0.849);
+  font-weight: 600;
+}
+
+.cartItem {
+  margin: auto; 
+  width: 70%;
+}
+
+#pagar:enabled {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-top: 30px;
+   background-color: rgba(7, 148, 75, 0.849);   
+  font-weight: 600;
+  margin-left: 30px;
+}
+
+.espacio {
+  padding-top: 33px;
+}
+
+button:disabled {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-top: 30px;
+   background-color: rgb(201, 203, 202);   
+  font-weight: 600;
+  margin-left: 30px;}
