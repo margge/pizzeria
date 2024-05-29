@@ -16,7 +16,7 @@ const NavBar = () => {
  
     <div className="">
     <a className="navbar-brand d-flex" href='/' >
-      <img src="src/assets/images/klipartz.com.png" className="mainIcon" width={60} height={60}/>
+      <img src="src/assets/images/klipartz.png" className="mainIcon" width={60} height={60}/>
       <span className="titulo">피자 Town</span>
     </a>
     </div>
