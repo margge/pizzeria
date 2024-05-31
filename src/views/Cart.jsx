@@ -25,7 +25,7 @@ const Cart = () => {
 
       <h5 hidden={cart.length !== 0} className='mt-4 mb-4 pt-4 pb-3'> 
       Antójate de una deliciosa pizza 
-      <img src="src/assets/images/klipartz.png" width={50} />
+      <img src="/images/klipartz.png" width={50} />
       </h5>
      
       <table className="table cartItem align-items-center">
